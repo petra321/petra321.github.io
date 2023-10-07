@@ -1,0 +1,249 @@
+
+/*Tekstit ja tausta*/
+
+p {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+h1 {
+color: rgb(255, 255, 255);
+font-size: 50px;
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  text-shadow: 2px 2px 5px rgb(175, 248, 241);
+  }
+
+
+ul {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+body {
+    background-color: rgb(47, 25, 76);
+}
+
+
+  body {
+    font-family: "Lato", sans-serif;
+  }
+
+  
+
+  /*Linkki*/
+
+  a:link {color:rgb(0, 128, 0); background-color:transparent; text-decoration:none}
+  a:visited {color:rgb(250, 172, 207); background-color:transparent; text-decoration:none}
+  a:hover {color:rgb(255, 0, 0); background-color:transparent; text-decoration:underline}
+  a:active {color:rgb(255, 255, 0); background-color:transparent; text-decoration:underline}
+
+
+
+  /*Sidebar*/
+
+  .sidebar {
+    height: 100%;
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(38, 6, 52);
+    overflow-x: hidden;
+    padding-top: 16px;
+  }
+
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    display: block;
+  }
+
+  .sidebar a:hover {
+    color: rgb(155, 188, 237);
+  }
+
+  .main {
+    margin-left: 180px;
+    padding: 0px 10px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidebar {
+      padding-top: 15px;
+    }
+
+    .sidebar a {
+      font-size: 18px;
+    }
+  }
+
+
+/*Määrittelyt eri kokoisille näytöille*/
+
+@media screen and (max-width: 2000px) {
+  .sivu {
+    margin-left: 15%;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .sivu {
+    margin-left: 20%;
+    margin-right: 20px;
+  }
+}
+
+  @media screen and (max-width: 1000px) {
+    .sivu {
+      margin-left: 25%;
+      margin-right: 10px;
+    }
+  }
+
+  /* Näytöt pienempi kuin 700px leveys, sidebar siirtyy ylös horisontaalisesti */
+
+@media screen and (max-width: 700px) {
+  
+  .sivu {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* Näytöt pienempi kuin 400px, sidebar on vertikaalinen */
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .sivu {
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+}
+
+
+/*Sydän*/
+  
+  #heart {
+      position: relative;
+      width: 100px;
+      height: 90px;
+      animation: heartbeat 1s infinite;
+      margin:0 auto
+  }
+  #heart:before,
+  #heart:after {
+      position: absolute;
+      content: "";
+      left: 50px;
+      top: 0;
+      width: 50px;
+      height: 80px;
+      background: #ee9fd1;
+      -moz-border-radius: 50px 50px 0 0;
+      border-radius: 50px 50px 0 0;
+      -webkit-transform: rotate(-45deg);
+         -moz-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+           -o-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      -webkit-transform-origin: 0 100%;
+         -moz-transform-origin: 0 100%;
+          -ms-transform-origin: 0 100%;
+           -o-transform-origin: 0 100%;
+              transform-origin: 0 100%;
+  }
+  #heart:after {
+      left: 0;
+      -webkit-transform: rotate(45deg);
+         -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+           -o-transform: rotate(45deg);
+              transform: rotate(45deg);
+      -webkit-transform-origin: 100% 100%;
+         -moz-transform-origin: 100% 100%;
+          -ms-transform-origin: 100% 100%;
+           -o-transform-origin: 100% 100%;
+              transform-origin :100% 100%;
+  }
+  
+  
+  
+  @keyframes heartbeat
+  {
+    0%
+    {
+      transform: scale( .75 );
+    }
+    20%
+    {
+      transform: scale( 1 );
+    }
+    40%
+    {
+      transform: scale( .75 );
+    }
+    60%
+    {
+      transform: scale( 1 );
+    }
+    80%
+    {
+      transform: scale( .75 );
+    }
+    100%
+    {
+      transform: scale( .75 );
+    }
+  }
+  
+
+  /*Kehys*/
+
+  .frame {
+    width: 300px;
+    height: 250px;
+    border: 8px solid #7698c8;
+    background: #eee;
+    padding: 15px 10px;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 6px 6px 6px rgb(3, 6, 34);
+  }
+
+
+  /*Nappi*/
+
+.nappi {
+  background-color: rgb(99, 215, 182);
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nappi:hover {
+  background-color: rgb(58, 121, 121);
+  color: white;
+}
